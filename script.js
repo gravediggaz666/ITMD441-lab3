@@ -17,11 +17,11 @@ document.addEventListener("DOMContentLoaded", function () {
             tipPercentageInput.value = tipPercentage + "%";
             tipAmount = tipAmount.toFixed(2);
             totalWithTip = totalWithTip.toFixed(2);
-            tipSliderInput.style.backgroundColor = "#4CAF50"; // Highlight the slider
+            tipSliderInput.style.backgroundColor = "#4CAF50"; 
         } else {
-            tipSliderInput.style.backgroundColor = "#FF0000"; // Highlight the slider in case of an error
+            tipSliderInput.style.backgroundColor = "#FF0000";
         }
 
-        totalWithTipInput.value = totalWithTip;
+        totalWithTipInput.value = "$" + totalWithTip; 
     }
 });
