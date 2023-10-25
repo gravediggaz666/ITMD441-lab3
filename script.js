@@ -4,15 +4,17 @@ document.addEventListener("DOMContentLoaded", function () {
     const tipSliderInput = document.getElementById("tipSlider");
     const totalWithTipInput = document.getElementById("totalWithTip");
 
+    const tipCalculatorForm = document.getElementById("tipCalculator");
+
     tipCalculatorForm.addEventListener("input", calculateTip);
 
     function calculateTip() {
         const billTotal = parseFloat(billTotalInput.value);
         if (isNaN(billTotal)) {
-            totalWithTipInput.value = "$0.00"; // Handle non-numeric input
+            totalWithTipInput.value = "$0.00";
             return;
         }
-        
+
         const tipPercentage = tipSliderInput.value;
         const tipAmount = (billTotal * tipPercentage) / 100;
         const totalWithTip = billTotal + tipAmount;
