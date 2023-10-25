@@ -5,12 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tip Calculator</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Chakra+Petch:wght@700&family=Patrick+Hand&family=Teko&display=swap');
+      </style>
 </head>
 <body>
     <h1>Tip Calculator</h1>
     <form id="tipCalculator">
         <div class="input-container">
-            <label for="billTotal">Bill Total</label>
+            <label for="billTotal">Bill Total:</label>
             <input type="text" id="billTotal" placeholder="Enter bill total:">
         </div>
         <div class="input-container">
@@ -18,7 +21,7 @@
             <input type="text" id="tipPercentage" disabled>
         </div>
         <div class="input-container">
-            <label for="tipSlider">Tip Amount:</label>
+            <label for="tipSlider">Tip Amount</label>
             <input type="range" id="tipSlider" min="0" max="100">
         </div>
         <div class="input-container">
