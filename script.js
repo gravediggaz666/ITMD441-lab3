@@ -3,25 +3,21 @@ document.addEventListener("DOMContentLoaded", function () {
     const tipPercentageInput = document.getElementById("tipPercentage");
     const tipSliderInput = document.getElementById("tipSlider");
     const totalWithTipInput = document.getElementById("totalWithTip");
-    const tipCalculatorForm = document.getElementById("tipCalculator");
 
     tipCalculatorForm.addEventListener("input", calculateTip);
 
     function calculateTip() {
         const billTotal = parseFloat(billTotalInput.value);
+        if (isNaN(billTotal)) {
+            totalWithTipInput.value = "$0.00"; // Handle non-numeric input
+            return;
+        }
+        
         const tipPercentage = tipSliderInput.value;
         const tipAmount = (billTotal * tipPercentage) / 100;
         const totalWithTip = billTotal + tipAmount;
 
-        if (!isNaN(totalWithTip)) {
-            tipPercentageInput.value = tipPercentage + "%";
-            tipAmount = tipAmount.toFixed(2);
-            totalWithTip = totalWithTip.toFixed(2);
-            tipSliderInput.style.backgroundColor = "#4CAF50"; 
-        } else {
-            tipSliderInput.style.backgroundColor = "#FF0000";
-        }
-
-        totalWithTipInput.value = "$" + totalWithTip; 
+        tipPercentageInput.value = tipPercentage + "%";
+        totalWithTipInput.value = "$" + totalWithTip.toFixed(2);
     }
 });
