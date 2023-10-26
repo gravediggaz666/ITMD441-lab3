@@ -2,6 +2,7 @@ body {
     font-family: 'Abril Fatface', serif;
     font-family: 'Chakra Petch', sans-serif;
     text-align: center;
+    background: radial-gradient(red, blue);
 }
 
 h1 {
@@ -41,8 +42,4 @@ input[type="text"] {
 
 input[type="range"] {
     width: 100%;
-}
-
-.simple-radial {
-    background: radial-gradient(red, blue);
 }
