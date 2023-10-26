@@ -18,7 +18,7 @@ h1 {
     padding: 20px;
     border: 4px inset rgba(0, 0, 0, 0.338);
     border-radius: 15px;
-    background-color: white;
+    background-color: white; 
 }
 
 form {
